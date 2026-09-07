@@ -28,6 +28,8 @@ If this is your first time accessing the Test Menu after patching, it is recomme
 
 To set up the Timer Bomb, access the Test Menu and cycle through the different options (ON, OFF, VISIBLE, TRAINING).
 
+<img src="snap/0000.png" width="300%">
+
 ## Timer Bomb Options
 
 ### ON
