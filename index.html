@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turtles in Time - Visible Timer Patcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="gameTitle">Patcher</h1>
+  <p class="subtitle">
+    Load your ROMs locally. They are validated, patched and downloaded directly
+    in your browser: nothing is uploaded to any server.
+    More information on the <a id="repoLink" href="#" target="_blank" rel="noopener">GitHub repository</a>.
+  </p>
+
+  <div class="sets-columns">
+    <h2>Compatible Sets</h2>
+    <div id="compatibleSets"><!-- generated dynamically by main.js from ROMSETS --></div>
+  </div>
+
+  <div class="card">
+    <h2>Source Set</h2>
+    <div id="romsetSelector"><!-- generated dynamically by main.js from ROMSETS --></div>
+  </div>
+
+  <div class="card">
+    <h2>Files</h2>
+    <div id="files"><!-- generated dynamically by main.js based on the chosen set --></div>
+  </div>
+
+  <button id="applyBtn" disabled>Apply Patches and Download</button>
+
+  <div id="log"></div>
+
+  <footer>Turtles in Time - Visible Timer v1.0 · Processed 100% in your browser · Open source · MIT License · <a href="https://github.com/enkorsan/TurtlesInTime-VisibleTimer" target="_blank" rel="noopener">Source on GitHub</a></footer> 
+
+  <script src="constants.js"></script>
+  <script src="checksum.js"></script>
+  <script src="validator.js"></script>
+  <script src="ipsPatcher.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
