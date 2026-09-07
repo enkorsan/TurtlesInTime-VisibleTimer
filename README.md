@@ -28,7 +28,7 @@ If this is your first time accessing the Test Menu after patching, it is recomme
 
 To set up the Timer Bomb, access the Test Menu and cycle through the different options (ON, OFF, VISIBLE, TRAINING).
 
-<img src="snap/0000.png" width="300%">
+<img src="snap/0000.png" width="200%">
 
 ## Timer Bomb Options
 
@@ -40,13 +40,19 @@ The original arcade mode. The bomb falls on you after 5 minutes without losing a
 
 The timer bomb is switched off entirely. You can play without the pressure of time and improve your technique without rushing. A text ("TIMER OFF") is printed on screen as a reminder.
 
+<img src="snap/0008.png" width="200%">
+
 ### VISIBLE
 
 The timer is active just like in the original arcade mode (you have 5 minutes to clear the level without losing a life), but in this mode the remaining seconds are printed on screen, like in other beat 'em up games. This way you always know exactly when the bomb will fall.
 
+<img src="snap/0003.png" width="200%">
+
 ### TRAINING
 
 The timer is active, but a bomb falls every 10 seconds. This mode is designed to help you train how to dodge the bomb — with practice, it becomes easy. When the timer reaches 0, you'll see the bomb falling at the top of the screen. At that precise moment, press both the attack and jump buttons together (without any direction) to perform a vertical attack. With the right timing, the bomb won't touch you and you'll dodge it successfully.
+
+<img src="snap/0011.png" width="200%">
 
 ---
 
