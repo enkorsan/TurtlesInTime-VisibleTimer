@@ -1,40 +1,10 @@
-// constants.js
-// Configuracion generica del juego / ROM sets.
-//
-// v1.1: soporta VARIOS romsets de origen (p.ej. distintas regiones de la
-// misma placa) para el MISMO parche/hack. El usuario elige que romset tiene
-// y la web solo muestra/valida los archivos de ese grupo.
-//
-// tmht22pe (Europa, EBA) y tmnt22pu (USA, UDA) son dos bases de origen
-// distintas que, tras aplicar su .ips correspondiente, producen el MISMO
-// hack (Turtles in Time - Visible Timer).
-//
-// Cada entrada de ROMSETS representa un set completo (p.ej. tmht22pe).
-// Cada entrada de "files" dentro de un romset representa UN archivo (chip)
-// al que se le aplica UN unico parche IPS (v1: sin opciones modulares).
-//
-// Campos de cada file:
-//   id     -> identificador interno unico DENTRO del romset (sin espacios).
-//   label  -> texto visible en la interfaz para ese archivo.
-//   file   -> nombre de archivo esperado; se usa como nombre de descarga del
-//             resultado (igual que el original, para poder sobreescribirlo
-//             directamente en MAME o grabarlo en una EPROM).
-//   patch  -> ruta relativa al .ips dentro de /patches. Debe copiarse ahi
-//             con el mismo nombre que el archivo original + ".ips".
-//   before -> checksums esperados del archivo ORIGINAL antes de parchear.
-//   after  -> checksums esperados del archivo RESULTANTE tras parchear.
-//
-// NOTA (2026-09-07 22:57): los valores "after" se actualizaron tras nuevos
-// cambios en el parche/hack. Si vuelves a tocar los .ips, recuerda
-// recalcular y actualizar estos valores tambien.
-
 const GAME_TITLE = "Turtles in Time - Visible Timer";
 const GAME_REPO_URL = "https://github.com/enkorsan/TurtlesInTime-VisibleTimer";
 
 const ROMSETS = [
   {
     id: "tmht22pe",
-    label: "tmht22pe (2P, ver. EBA - Europa)",
+    label: "tmht22pe (2P, ver. EBA - Europe)",
     files: [
       {
         id: "02",
@@ -108,6 +78,4 @@ const ROMSETS = [
       }
     ]
   }
-  // Para anadir otro romset origen del mismo hack: duplica un bloque,
-  // cambia id/label/files y coloca los .ips en /patches/<id>/.
 ];

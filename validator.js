@@ -1,11 +1,11 @@
 function formatMismatch(label, expected, actual) {
-  return `${label} doesn't match.\nExpected: ${expected}\nObtained: ${actual}`;
+  return `${label} mismatch.\nExpected: ${expected}\nGot: ${actual}`;
 }
 
 function validateAgainstSpec(checksums, spec, label) {
   const errors = [];
   if (checksums.size !== spec.size) {
-    errors.push(formatMismatch(`${label} tamano`, spec.size, checksums.size));
+    errors.push(formatMismatch(`${label} size`, spec.size, checksums.size));
   }
   if (checksums.sha1 !== spec.sha1) {
     errors.push(formatMismatch(`${label} SHA1`, spec.sha1, checksums.sha1));
@@ -26,16 +26,14 @@ function getFileSpec(romsetId, fileId) {
   return romset.files.find(f => f.id === fileId) || null;
 }
 
-// Valida el archivo tal como lo carga el usuario (antes de parchear).
 function validateOriginal(checksums, romsetId, fileId) {
   const spec = getFileSpec(romsetId, fileId);
-  if (!spec) return [`Archivo desconocido: ${romsetId}/${fileId}`];
+  if (!spec) return [`Unknown file: ${romsetId}/${fileId}`];
   return validateAgainstSpec(checksums, spec.before, spec.label);
 }
 
-// Valida el archivo resultante tras aplicar el parche IPS.
 function validatePatched(checksums, romsetId, fileId) {
   const spec = getFileSpec(romsetId, fileId);
-  if (!spec) return [`Archivo desconocido: ${romsetId}/${fileId}`];
+  if (!spec) return [`Unknown file: ${romsetId}/${fileId}`];
   return validateAgainstSpec(checksums, spec.after, spec.label);
 }
